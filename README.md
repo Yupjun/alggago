@@ -5,7 +5,7 @@ By [멋쟁이사자처럼](http://likelion.net).
 
 ### macOS
 
-rbenv로 Ruby 설치 (version 2.2.5)
+rbenv로 Ruby 설치 (version 2.3.3)
 
 * Terminal 을 열고 다음의 명령어를 입력하여 rbenv를 설치한다.
 ```console
@@ -18,8 +18,8 @@ $ rbenv -v
 ```
 * rbenv가 제대로 설치된 것을 확인하였다면, 다음의 명령어를 입력하여 Ruby를 설치한다.
 ```console
-$ rbenv install 2.2.5
-$ rbenv global 2.2.5
+$ rbenv install 2.3.3
+$ rbenv global 2.3.3
 ```
 * `ruby -v`로 Ruby가 제대로 설치 되었는지 확인한다.
 ```console
@@ -28,8 +28,8 @@ $ ruby -v
 
 ### Windows
 
-RubyInstaller로 Ruby 설치 (Version 2.2.5)
-* http://rubyinstaller.org/downloads 에서 본인의 컴퓨터가 32비트이면 `Ruby 2.2.5 `, 64비트이면 `Ruby 2.2.5 (x64)`를 다운로드 받아 설치한다.
+RubyInstaller로 Ruby 설치 (Version 2.3.3)
+* http://rubyinstaller.org/downloads 에서 본인의 컴퓨터가 32비트이면 `Ruby 2.3.3 `, 64비트이면 `Ruby 2.3.3 (x64)`를 다운로드 받아 설치한다.
 * 설치 도중 나오는 `Add Ruby executables to your PATH`에 체크한다.
 * CMD를 열고 `ruby -v`를 입력하여 Ruby가 제대로 설치 되었는지 확인한다.
 ```console
@@ -48,7 +48,7 @@ $ ruby dk.rb install
 
 ### Linux (Ubuntu)
 
-rbenv로 Ruby 설치 (version 2.2.5)
+rbenv로 Ruby 설치 (version 2.3.3)
 * Terminal 을 열고 다음의 명령어를 입력하여 rbenv를 설치한다.
 ```console
 $ git clone git://github.com/sstephenson/rbenv.git .rbenv
@@ -67,8 +67,8 @@ $ rbenv -v
 * rbenv가 제대로 설치된 것을 확인하였다면, 다음의 명령어를 입력하여 Ruby를 설치한다.
 
 ```console
-$ rbenv install 2.2.5
-$ rbenv global 2.2.5
+$ rbenv install 2.3.3
+$ rbenv global 2.3.3
 ```
 * `ruby -v`로 Ruby가 제대로 설치 되었는지 확인한다.
 ```console
@@ -98,10 +98,10 @@ $ ruby alggago.rb
 ```
 
 ### AI vs. Uesr
-`alggago.rb` 파일과 같은 위치에 `ai_[name].rb` 파일 __하나__를 둔다.
+`alggago.rb` 파일과 같은 위치에 `ai_[name].rb` 파일 **하나**를 둔다.
 
 ### AI vs. AI
-`alggago.rb` 파일과 같은 위치에 `ai_[name].rb` 파일 __둘__을 둔다.
+`alggago.rb` 파일과 같은 위치에 `ai_[name].rb` 파일 **둘**을 둔다.
 
 ## Make Your Own Alggago Code
 `ai_black.rb` 파일의 다음 부분을 수정하여 Alggago AI를 만든다.
@@ -110,31 +110,32 @@ $ ruby alggago.rb
 class MyAlggago
   def calculate(positions)
 
-    #Codes here
+    # Write your own codes here
 
-      #Insert Your Codes here
+    ...
 
-    #Return values
+    # End of codes
+
+    # Return values
     ...
     return [stone_number, stone_x_strength, stone_y_strength, message]
 
-    #Codes end
   end
 ```
 
 ### Input parameter
-- `positions` : __본인 돌의 위치__와 __상대방 돌의 위치__를 가지고 있는 배열.
+- `positions` : **본인 돌의 위치**와 **상대방 돌의 위치**를 가지고 있는 배열.
 ```ruby
 positions #=> [Array, Array]
 ```
 
-- `positions[n]` : __돌의 위치 정보 배열 `[x,y]`__를 가지고 있는 배열. size는 살아있는 돌의 갯수와 같다. 돌이 죽으면 배열에서 삭제된다. 여기서 `n`은 `0` 또는 `1`.
+- `positions[n]` : **돌의 위치 정보 배열 `[x,y]`**를 가지고 있는 배열. size는 살아있는 돌의 갯수와 같다. 돌이 죽으면 배열에서 삭제된다. 여기서 `n`은 `0` 또는 `1`.
 ```ruby
 # 0 : 본인 돌의 위치, 1 : 상대방 돌의 위치
 positions[0] #=> [Array, Array, Array, Array, Array, Array, Array]
 ```
 
-- `positions[n][m]` : `positions[n]`에 들어있는 __m번째 돌의 위치 정보 배열__ , 여기서 `m`은 `0`에서 `6`까지, 위치 정보는 좌표 `[x, y]`의 형태를 하고 있다.
+- `positions[n][m]` : `positions[n]`에 들어있는 **m번째 돌의 위치 정보 배열** , 여기서 `m`은 `0`에서 `6`까지, 위치 정보는 좌표 `[x, y]`의 형태를 하고 있다.
 ```ruby
 # 0..6: 돌의 위치
 positions[0][6] #=> [float, float]
