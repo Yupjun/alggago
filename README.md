@@ -79,7 +79,7 @@ $ ruby -v
 
 ### Using Git
 ```console
-$ git clone https://github.com/likelion-campus/alggago.git
+$ git clone https://github.com/likelion-net/alggago.git
 ```
 
 ### Using 'Download ZIP'
@@ -92,7 +92,7 @@ Alggago 실행을 위한 gem을 설치한다.
 $ gem install gosu chipmunk slave childprocess
 ```
 
-만약 macOS를 사용 중이라면, `gosu`의 설치를 위해 `sdl2`를 **먼저** 설치해주어야 한다.
+만약 **macOS**를 사용 중이라면, `gosu`의 설치를 위해 `sdl2`를 **먼저** 설치해주어야 한다.
 ```console
 $ brew install sdl2
 ```
