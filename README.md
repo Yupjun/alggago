@@ -92,7 +92,7 @@ Alggago 실행을 위한 gem을 설치한다.
 $ gem install gosu chipmunk slave childprocess
 ```
 
-만약 macOS를 사용 중이라면, `gosu`의 설치를 위해 `sdl2`를 **먼저** 설치해주어야 한다. [[참고](https://github.com/gosu/gosu/wiki/Getting-Started-on-OS-X)]
+만약 macOS를 사용 중이라면, `gosu`의 설치를 위해 `sdl2`를 설치해주어야 한다. [[참고](https://github.com/gosu/gosu/wiki/Getting-Started-on-OS-X)]
 ```console
 $ brew install sdl2
 ```
