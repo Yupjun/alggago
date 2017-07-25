@@ -92,6 +92,11 @@ Alggago 실행을 위한 gem을 설치한다.
 $ gem install gosu chipmunk slave childprocess
 ```
 
+만약 macOS를 사용 중이라면, `gosu`의 설치를 위해 `sdl2`를 **먼저** 설치해주어야 한다.
+```console
+$ brew install sdl2
+```
+
 ## Run
 ```console
 $ ruby alggago.rb
@@ -129,7 +134,7 @@ class MyAlggago
 positions #=> [Array, Array]
 ```
 
-- `positions[n]` : **돌의 위치 정보 배열 `[x,y]`**를 가지고 있는 배열. size는 살아있는 돌의 갯수와 같다. 돌이 죽으면 배열에서 삭제된다. 여기서 `n`은 `0` 또는 `1`.
+- `positions[n]` : **돌의 위치 정보 배열** `[x,y]`를 가지고 있는 배열. size는 살아있는 돌의 갯수와 같다. 돌이 죽으면 배열에서 삭제된다. 여기서 `n`은 `0` 또는 `1`.
 ```ruby
 # 0 : 본인 돌의 위치, 1 : 상대방 돌의 위치
 positions[0] #=> [Array, Array, Array, Array, Array, Array, Array]
